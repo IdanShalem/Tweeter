@@ -4,7 +4,11 @@ const Renderer = function(){
 
     const appendTextP = text => `<p class='post-text'>${text}</p>`
 
-    const appendComment = comment => `<p class='comments' data-id='${comment.id}'>${comment.text}</p>`
+    const appendComments = (comments, $post) =>{
+        for (let comment of comments){
+           $post.append(`<p class='comments' data-id='${comment.id}'>${comment.text}</p>`)
+        } 
+    }
         
     const renderPosts = function(posts){
         $('#posts').empty()
@@ -15,9 +19,7 @@ const Renderer = function(){
 
             $post.append(appendTextP(post.text))
 
-            for(let comment of post.comments){
-                $post.append(appendComment(comment))
-            }  
+            appendComments(post.comments, $post) 
 
             $('#posts').append($post)
 
