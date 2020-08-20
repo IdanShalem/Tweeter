@@ -56,11 +56,16 @@ body{
 
 .post-text{
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 .comments{
     margin-left: 10px;
-    margin: 10px;
+    margin: 5px;
+    justify-self: start;
+    background-color: rgb(231, 248, 253);
+    padding-right: 10px;
+    border: 1.2px outset rgb(211, 211, 211);
 }
 
 .comment{
@@ -89,6 +94,9 @@ body{
     font-family: 'Balthazar', serif;
     font-weight: bold;
 }
+.comment-btn:active{
+    background-color: #3b80ad;
+}
 
 .delete{
     cursor: pointer;
@@ -102,10 +110,15 @@ body{
     outline: none;
     justify-self: start;
 }
+.delete:active{
+    background-color: #a82a1c;
+    color: black;
+}
 
 .delete-comment{
     cursor: pointer;
     color: #e74c3c;
     border: none;
     outline: none;
+    background-color: transparent;
 }
