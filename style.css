@@ -22,6 +22,7 @@ body{
     grid-area: i;
     padding: 10px;
     font-size: 1.5vw;
+    outline: none;
 }
 
 #posts{
@@ -45,6 +46,8 @@ body{
     margin: 10px;
     border-radius: 5px;
     padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 #post:active{
@@ -60,17 +63,49 @@ body{
     margin: 10px;
 }
 
+.comment{
+    display: inline-block;
+}
+
+.comment-inpbtn{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 15px;
+    justify-self: start;
+    margin: 10px;
+}
+.comment-input{
+    display: inline-block;
+    font-size: 1.05em;
+    padding: 10px;
+    font-family: 'Balthazar', serif;
+    outline: none;
+}
+.comment-btn{
+    outline: none;
+    background-color: #7bc2f1;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: 'Balthazar', serif;
+    font-weight: bold;
+}
+
 .delete{
     cursor: pointer;
     color: #ecf0f1;
     background-color: #e74c3c;
     display: inline-block;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 7px;
+    border: 1px solid black;
     font-size: 0.8em;
+    margin: 10px;
+    outline: none;
+    justify-self: start;
 }
 
 .delete-comment{
     cursor: pointer;
     color: #e74c3c;
+    border: none;
+    outline: none;
 }

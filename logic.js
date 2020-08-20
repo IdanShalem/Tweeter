@@ -41,14 +41,14 @@ const Tweeter = function(){ //The tweeter module function
     const getPosts = () => _posts //A function that returns the posts array
 
     const addPost = function(text) { //A function that receives some text and adds a post object to posts
-        const id = `p${postIdCounter}` //id is the p letter represting a post concatenated with the next number that the counter holds
-        const comments = [] //each post gets a comments array wich is empty at first
-        _posts.push({text, id, comments})
+        const id = `p${postIdCounter}` 
+        const comments = [] 
+        _posts.unshift({text, id, comments})
         postIdCounter++ //the counter increases by 1
     }
 
     const removePost = function(postID){ //function that receives a postID and removes the relevant post from posts array
-        postIndex = _posts.findIndex(p => p.id === postID)//finds the post by it's id in the array
+        postIndex = _posts.findIndex(p => p.id === postID)
         if(postIndex >= 0){//if id does not exist postIndex will be -1
             _posts.splice(postIndex, 1)
         }
@@ -56,9 +56,9 @@ const Tweeter = function(){ //The tweeter module function
 
     const addComment = function(text, postID){
         //function that receives a postID and text and pushes a new comment in the comments array of the exact post
-        const index = _posts.findIndex(p => p.id === postID)//finds the post object by the given postID
+        const index = _posts.findIndex(p => p.id === postID)
         if(index >= 0){ //if the id doesn't exist index will be -1
-            const id = `c${commentIdCounter}`//the comment's id is the letter c and the number that the comment's counter holds
+            const id = `c${commentIdCounter}`
             _posts[index].comments.push({id, text})
             commentIdCounter++
         }
@@ -67,9 +67,9 @@ const Tweeter = function(){ //The tweeter module function
 
     const removeComment = function(postID, commentID){
         //functiuon that gets a postId and commentID and removes the wanted comment from the wanted post
-        const postIndex = _posts.findIndex(p => p.id === postID)//finds the post by the given postID
+        const postIndex = _posts.findIndex(p => p.id === postID)
         if(postIndex >= 0){//id the id doesn't exist postIndex will be -1
-            const commentIndex = _posts[postIndex].comments.findIndex(c => c.id === commentID)//finds the comment inside the post by the given id
+            const commentIndex = _posts[postIndex].comments.findIndex(c => c.id === commentID)
             if(commentIndex >= 0){//if the id doesn't exist commentIndex will be -1
                 _posts[postIndex].comments.splice(commentIndex, 1)
             }

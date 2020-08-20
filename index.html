@@ -10,13 +10,14 @@
     
     <div id="container">
         <h1 id="title">Tweeter</h1>
-        <input type="text" placeholder="What's on your mind?" id="input">
+        <input type="text" placeholder="What's on your mind?" id="input"
+        onfocus="this.placeholder=''" onblur="this.placeholder=`What's on your mind?`">
         <div id="post" onclick="post()">Twit</div>
         <div id="posts"></div>
     </div>
 
-    <script src="render.js"></script> <!-- You'll create this soon -->
+    <script src="render.js"></script> 
     <script src="logic.js"></script> 
-    <script src="main.js"></script> <!-- You'll create this soon -->
+    <script src="main.js"></script> 
 </body>
 </html>
