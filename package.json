@@ -1,0 +1,23 @@
+{
+  "name": "tweeter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "review": "node node_modules/elevation-pr/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdanShalem/Tweeter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IdanShalem/Tweeter/issues"
+  },
+  "homepage": "https://github.com/IdanShalem/Tweeter#readme",
+  "dependencies": {
+    "elevation-pr": "^1.3.0"
+  }
+}
